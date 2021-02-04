@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>〇✕ゲーム</title>
+    <link rel="stylesheet" href="tic-tac-toe.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="app">
+        <table id="table" v-for="(mass,massIndex) in masses">
+            <tr v-for="(row,rowsIndex) in mass.states">
+                <td v-for="(state,colsIndex) in row" @click="onSelect(massIndex,rowsIndex,colsIndex)">
+                  <div style="color:#f00;"v-if="state==1">〇</div>
+                  <div style="color:#00f;"v-if="state==2">✕</div>
+                  <div style="color:#000;"v-if="state==3">-</div>
+                </td>
+            </tr>
+        </table>
+      </div>
+      <div id="reset" @click="restart">
+        <p>初めから</p>
+      </div>
+        <div>
+          <div style="color:#f00;" v-if="playerId==1">「○プレイヤーさん、マスを選んでください」</div>
+          <div style="color:#00f;" v-if="playerId==2">「×プレイヤーさん、マスを選んでください」</div>
+        </div>
+        </div>
+    <script src="tic-tac-toe.js"></script>
+  </body>
+</html>

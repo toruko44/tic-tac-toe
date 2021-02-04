@@ -1,0 +1,45 @@
+body{
+    display: inline-block;
+    background-image: url("game_home2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+  }
+  .app {
+    width: 720px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  #app{
+    text-align: center;
+    display: inline-block;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+  }
+  #table {
+      margin:0 auto;
+      border-collapse: collapse;
+      border: 3px solid #ccc;
+  }
+  #table td {
+      border:1px solid #ccc;
+      height: 80px;
+      width: 80px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 80px;
+      font-size: 40px;
+      cursor: pointer;
+  }
+  .reset{
+    display:inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .player{
+    margin: 10px 0;
+  }
+  
